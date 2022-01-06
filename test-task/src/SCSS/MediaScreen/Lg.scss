@@ -1,0 +1,90 @@
+@media screen and (min-width: 992px) and (max-width: 1199px) {
+    main {
+        @include sizeElem(40px, 35px, $blockWidthL);
+        font-size: $fsNormalL;
+    }
+
+    header {
+        @include alignment;
+        @include propElem (35px);
+        height: $hL;
+        button {
+            @include button(180px, 50px)
+        }
+        .form {
+            @include form;
+            &::placeholder {
+                font-size: $fsNormalL;
+            }
+        }
+    }
+    
+    .main-container {
+        @include propElem ($hL);
+        @include alignment;
+        padding: 0;
+    }
+    .justify {
+        justify-content: center;
+    }
+
+    footer {
+        @include alignment;
+        @include propElem (0);
+        span {
+            margin: 0 $gap;
+            font-size: $fsNormalL;
+        }
+        div {
+            @include alignment;
+        }
+        button {
+            @include footerBtn (1.5em);
+        }
+    }
+    .arrowButton {
+        display: none;
+    }
+
+    .cards {
+        @include flexColumn (32vw, 300px, inherit);
+
+        button {
+            margin-top: 30px;
+            @include button(80%, 60px);
+        }
+    }
+    .card_small {
+        @include flexColumn (22vw, 265px, $fsSmallL);
+        
+        button {
+            margin-top: 30px;
+            @include button(80%, $hL);
+        }
+    }
+    
+    section {
+        display: grid;
+        gap: $gap;
+        grid-template-columns: repeat(2, 1fr) ;
+        align-content: center;
+    }
+    
+    .posts {
+        @include flexColumn (40vw, 100%, $fsSmallL);
+        margin-left: $gap;
+        position: relative;
+        .wrapper {
+            @include sizeElem(10%, 5%, 82%);
+        }
+        h3 {
+           @include h3 (1.3em, 30px) 
+        }
+        .btn-close {
+            transform: scale(.9, .9);
+            position: absolute;
+            top: 12px;
+            right: 20px;
+        }
+    }
+}

@@ -1,0 +1,85 @@
+@media screen and (min-width: 576px) and (max-width: 767px) {
+    main {
+        @include sizeElem(30px, 30px, $blockWidthS);
+        font-size: $fsSm;
+    }
+
+    header {
+        @include alignment;
+        @include propElem (35px);
+        height: 40px;
+        button {
+            @include button(180px, 100%)
+        }
+        .form {
+            @include form;
+            width: 200px;
+            &::placeholder {
+                font-size: $fsSm;
+            }
+        }
+    }
+    
+    .main-container {
+        @include propElem (0);
+        @include alignment;
+        padding: 0;
+        justify-content: center;
+    }
+    .justify {
+        justify-content: center;
+    }
+
+    footer {
+        display: none;
+    }
+    .arrowButton {
+        @include arrowButton (45%, 2.5rem);
+    }
+    .left {
+        left: 2%
+    }
+    .right {
+        right: 2%;
+    }
+
+    .cards {
+        @include flexColumn (38vw, 200px, 1rem);
+
+        button {
+            margin-top: $gapS;
+            @include button(80%, 40px);
+        }
+    }
+    .card_small {
+        @include flexColumn (38vw, 200px, 1rem);
+
+        button {
+            margin-top: $gapS;
+            @include button(80%, 40px);
+        }
+    }
+    
+    section {
+        display: grid;
+        gap: $gapS;
+        grid-template-columns: repeat(2, 1fr) ;
+        align-content: center;
+    }
+    
+    .posts {
+        @include flexColumn (94vw, fit-content, 0.9em);
+        @include postsMd (60px, 84%);
+
+        h3 {
+           @include h3 (1.3em, 25px) 
+        }
+        .btn-close {
+            transform: scale(1.1, 1.1);
+            position: fixed;
+            border: #111 2px solid;
+            top: 40px;
+            right: 35px;
+        }
+    }
+}

@@ -1,0 +1,85 @@
+@media screen and (min-width: 1200px) {
+    main {
+        @include sizeElem(50px, 65px, $blockWidthXL);
+        font-size: $fsNormalXL;
+    }
+
+    header {
+        @include alignment;
+        @include propElem (35px);
+        height: 55px;
+        button {
+            @include button(200px, 100%)
+        }
+        .form {
+            @include form
+        }
+    }
+    
+    .main-container {
+        @include propElem (55px);
+        @include alignment;
+        padding: 0;
+    }
+    .justify {
+        justify-content: center;
+    }
+    footer {
+        @include alignment;
+        @include propElem (0);
+        span {
+            margin: 0 $gap;
+            font-size: $fsNormalXL;
+        }
+        div {
+            @include alignment;
+        }
+        button {
+            @include footerBtn (1.7em);
+        }
+    }
+    .arrowButton {
+        display: none;
+    }
+    
+    .cards {
+        @include flexColumn (30vw, 370px, inherit);
+        
+        button {
+            margin-top: 30px;
+            @include button(80%, 70px);
+        }
+    }
+    .card_small {
+        @include flexColumn (22vw, 300px, $fsSmallXL);
+        
+        button {
+            margin-top: 30px;
+            @include button(80%, 55px);
+        }
+    }
+    
+    section {
+        display: grid;
+        gap: $gap;
+        grid-template-columns: repeat(2, 1fr) ;
+        align-content: center;
+    }
+    
+    .posts {
+        @include flexColumn (36vw, 100%, $fsSmallXL);
+        margin-left: $gap;
+        position: relative;
+        .wrapper {
+            @include sizeElem(10%, 5%, 84%);
+        }
+        h3 {
+            @include h3 (1.5em, 35px) 
+        }
+        .btn-close {
+            position: absolute;
+            top: 15px;
+            right: 25px;
+        }
+    }
+}

@@ -1,0 +1,87 @@
+@import "variables"; 
+
+
+@mixin propElem ($mb){
+    background: transparent;
+    margin-bottom: $mb;
+}
+@mixin sizeElem ($mTop, $mBottom, $width){
+    width: $width;
+    margin: $mTop ((100%-$width)/2) $mBottom;
+    color: $color ;
+}
+
+@mixin alignment {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+@mixin flexColumn ($w, $h, $fs) {
+    width: $w;
+    height: $h;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: $borRad;
+    background-color: $bgColor;
+    font-size: $fs;
+    color: $color;
+}
+
+@mixin button ($wb, $hb){
+    width: $wb;
+    height: $hb;
+    border-radius: $borRad;
+    background-color: $bgButton;
+    border: none;
+    color: $color;
+}
+@mixin transform {
+    transform: scale((570/870), (570/870));
+    justify-content: start;
+}
+@mixin footerBtn ($fs){
+    display: flex;
+    align-items: center;
+    background: transparent;
+    border: none;
+    font-size: $fs;
+    color: $color;
+}
+
+@mixin arrowButton ($mt, $fs) {
+    margin: 0;
+    position: fixed;
+    top: $mt;
+    background: transparent;
+    font-size: $fs;
+    color: $color;
+    border: none;
+    z-index: 10;
+} 
+@mixin postsMd ($mt, $w){
+    position: absolute;
+        top: 5%;
+        bottom: 5%;
+        border: aliceblue 2px solid;
+        opacity: 0.95;
+        .wrapper {
+            @include sizeElem($mt, 5%, $w);
+        }
+}
+@mixin form {
+    background-color: $bgColor;
+    border-radius: $borRad;
+    height: 100%;
+    border: none;
+    padding: 10px 10px 10px 20px;
+    color: aliceblue
+}
+
+@mixin h3 ($fs, $lh){
+    margin-bottom: 15px;
+    line-height: $lh;
+    font-size: $fs;
+}

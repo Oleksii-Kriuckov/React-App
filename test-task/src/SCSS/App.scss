@@ -1,0 +1,27 @@
+@import "Mixins";
+@import "variables"; 
+
+// Include any default variable overrides here (though functions won't be available)
+@import "../../node_modules/bootstrap/scss/bootstrap.scss";
+@import "../../node_modules/bootstrap/scss/functions";
+@import "../../node_modules/bootstrap/scss/variables";
+@import "../../node_modules/bootstrap/scss/mixins";
+
+@import './MediaScreen/XL.scss';
+@import './MediaScreen/Lg.scss';
+@import './MediaScreen/Md.scss';
+@import './MediaScreen/Sm.scss';
+@import './MediaScreen/xs.scss';
+
+.App {
+    text-align: center;
+}
+
+$body-bg: $bgAppColor;
+$body-color: $color;
+
+@import "../../node_modules/bootstrap/scss/bootstrap.scss";
+
+
+
+
